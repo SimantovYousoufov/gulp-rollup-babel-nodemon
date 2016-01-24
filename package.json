@@ -1,0 +1,38 @@
+{
+  "name": "rollup",
+  "version": "1.0.0",
+  "description": "Rollup.js build tool",
+  "main": "build/index.js",
+  "scripts": {
+    "start": "npm run build && node build/index.js",
+    "dev": "gulp dev",
+    "build": "gulp build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "rollup",
+    "build",
+    "tools"
+  ],
+  "author": "Albert Kawmi",
+  "license": "WTFPL",
+  "devDependencies": {
+    "babel-eslint": "^4.1.6",
+    "babel-preset-es2015": "^6.3.13",
+    "eslint": "^1.10.3",
+    "eslint-config-airbnb": "^4.0.0",
+    "gulp": "^3.9.0",
+    "gulp-babel": "^6.1.1",
+    "gulp-node-inspector": "^0.1.0",
+    "gulp-nodemon": "^2.0.6",
+    "gulp-rollup": "^1.7.0",
+    "gulp-shell": "^0.5.1",
+    "gulp-sourcemaps": "^1.6.0",
+    "node-inspector": "^0.12.5"
+  },
+  "babel": {
+    "presets": [
+      "es2015"
+    ]
+  }
+}
