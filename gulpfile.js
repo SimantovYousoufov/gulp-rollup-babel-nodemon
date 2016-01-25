@@ -5,6 +5,7 @@ var rollup = require('gulp-rollup');
 var sourcemaps = require('gulp-sourcemaps');
 var nodemon = require('gulp-nodemon');
 var nodeInspector = require('gulp-node-inspector');
+var util = require('gulp-util');
 
 gulp.task('default', ['build', 'watch']);
 
@@ -15,6 +16,7 @@ gulp.task('build', function build() {
     	sourceMap: true
     }))
     .pipe(babel())
+    .on('error', util.log)
     .pipe(sourcemaps.write())
     .pipe(gulp.dest('build'));
 });
@@ -24,9 +26,7 @@ gulp.task('watch', function watch() {
 });
 
 gulp.task('inspector', function inspector() {
-	gulp.src([]).pipe(nodeInspector({
-
-	}));
+	gulp.src([]).pipe(nodeInspector());
 });
 
 gulp.task('dev', ['build', 'inspector'], function startNodemon() {

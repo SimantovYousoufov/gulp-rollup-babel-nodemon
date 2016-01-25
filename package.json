@@ -28,6 +28,7 @@
     "gulp-rollup": "^1.7.0",
     "gulp-shell": "^0.5.1",
     "gulp-sourcemaps": "^1.6.0",
+    "gulp-util": "^3.0.7",
     "node-inspector": "^0.12.5"
   },
   "babel": {
